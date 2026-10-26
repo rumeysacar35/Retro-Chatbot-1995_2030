@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RETRO-BOT '95 Resmi Sayfasi!!!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="era-1995">
+
+<!-- Açılış: 1995 dial-up bağlantı penceresi (ses için bir tıklama gerekiyor) -->
+<div id="splash" class="splash">
+  <div class="win95">
+    <div class="win95-title">Bağlantı Kur</div>
+    <div class="win95-body">
+      <p>İnternete bağlanmak için modem hazır.</p>
+      <p>Aranacak numara: <b>0 850 199 5 95</b></p>
+      <p>Hız: <b>28.8 Kbps</b></p>
+      <div class="win95-buttons">
+        <button type="button" id="connect-sound">Bağlan 🔊</button>
+        <button type="button" id="connect-silent">Sessiz bağlan 🔇</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sahte "Netscape'te açılıyor" yükleme ekranı -->
+<div id="loader" class="loader" hidden>
+  <div class="win95 loader-win">
+    <div class="win95-title">Netscape</div>
+    <div class="win95-body">
+      <p>Netscape'te açılıyor: <b>http://www.retro-bot95.com/</b></p>
+      <div class="progress"><div id="progress-fill" class="progress-fill"></div></div>
+      <p id="loader-status">Ana bilgisayar aranıyor...</p>
+    </div>
+  </div>
+</div>
+
+<!-- Çağ geçişlerindeki TV parazit efekti -->
+<canvas id="static-canvas" class="static-canvas" width="192" height="108" hidden></canvas>
+
+<div class="topbar">
+  <button id="sound-toggle" type="button" title="Sesi aç / kapat">🔊</button>
+</div>
+
+<section class="timeline" aria-label="Zaman makinesi">
+  <div class="tl-caption">⏳ ZAMAN MAKİNESİ — çizgiyi sürükle</div>
+  <div class="tl-wrap">
+    <div id="tl-rail" class="tl-rail"></div>
+  </div>
+</section>
+
+<marquee id="retro-marquee" class="only-1995" behavior="alternate" scrollamount="6">*** RETRO-BOT '95'E HOSGELDINIZ *** EN IYI YAPAY ZEKA SOHBET BOTU *** NETSCAPE NAVIGATOR ILE EN IYI GORUNUR ***</marquee>
+
+<main class="card">
+  <h1 id="title" class="title">RETRO-BOT '95</h1>
+  <p id="subtitle" class="subtitle">%%% Zihni 1995'te Kalmis Yapay Zeka ile Sohbet Et! %%%</p>
+
+  <div class="badges only-1995">
+    <span class="badge">YENI!</span>
+    <span class="badge">EN IYI 100 SITE!</span>
+    <span class="badge">800x600 ICIN OPTIMIZE</span>
+  </div>
+
+  <div class="construction only-1995"><span>🚧 YAPIM AŞAMASINDA – UNDER CONSTRUCTION 🚧</span></div>
+
+  <hr class="divider">
+
+  <div id="chat-log" class="chat-log"></div>
+
+  <form id="chat-form">
+    <input type="text" id="message-input" placeholder="Mesajini buraya yaz..." autocomplete="off" required>
+    <button type="submit" id="send-button">GONDER &gt;&gt;</button>
+  </form>
+
+  <section class="guestbook only-1995">
+    <h2>📖 ZİYARETÇİ DEFTERİ</h2>
+    <form id="gb-form" class="gb-form">
+      <input type="text" id="gb-name" placeholder="Adın" maxlength="24" required>
+      <input type="text" id="gb-message" placeholder="Mesajın" maxlength="140" required>
+      <button type="submit">İMZALA</button>
+    </form>
+    <div id="gb-entries" class="gb-entries"></div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="footer">
+    <p class="only-1995">Bu site <span class="blink">800x600</span> cozunurluk icin optimize edilmistir.</p>
+    <p class="only-1995">Ziyaretci sayaci: <span id="visitor-counter">000000</span></p>
+    <p id="copyright">&copy; 1995 RETRO-BOT Industries. Tum haklari saklidir.</p>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
